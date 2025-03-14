@@ -13,3 +13,6 @@ Parçalanma olmadan güvenli ve hızlı bellek tahsisi için `Arena` yapısını
 - [ ] StartFrameMemory
 - [ ] ResetFrameMemory
 - [ ] 9-slice box
+- [ ] DynamicText
+- [ ] 
+
