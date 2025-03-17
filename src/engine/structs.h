@@ -1,7 +1,11 @@
 #pragma once
 
 #include <stdint.h>
+#include <stdio.h>
 #include "raylib.h"
+
+#define WIDTH GetScreenWidth()
+#define HEIGHT GetScreenWidth()
 
 typedef const char* cstr_t;
 typedef int         flag;
@@ -30,6 +34,14 @@ typedef struct Arena {
     size_t size;
 } Arena;
 
+typedef struct Animation {
+    Texture *texture;
+    int current;
+    Rectangle src;
+    Rectangle dst;
+    Vector2 origin;
+    float rotation;
+} Animation;
 
 
 typedef struct {

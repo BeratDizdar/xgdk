@@ -19,14 +19,16 @@ void LookAt(float *angle, Vector2 p1, Vector2 p2)
     *angle = atan2f(dy, dx);
 }
 
-void handleAnimation(float *animation_time, int *animation_index, float *dt)
+void handleAnimation(float *time, int *index, float *dt, float duration, int ani_count)
 {
-    *animation_time += *dt;
-    if(*animation_time > 1.0f) {
-        *animation_index += 1;
-        if(*animation_index > 1) {
-            *animation_index = 0;
+    *time += *dt;
+    if(*time > duration) {
+        *index += 1;
+        if(*index > ani_count - 1) {
+            *index = 0;
         }
-        *animation_time = 0.0f;
+        *time = 0.0f;
     }
 }
+
+

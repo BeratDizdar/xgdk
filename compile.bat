@@ -31,7 +31,7 @@ FOR %%f IN (src\game\*.c) DO (
 %CC% -o %OUT% main.c %OBJ% %CFLAGS% %LDFLAGS%
 
 IF EXIST %OUT% (
-    upx %OUT%
+    REM upx %OUT%     henüz eklemedim en son ekleyeceğim
     %OUT%
 ) ELSE (
     echo Error: Executable not found.
